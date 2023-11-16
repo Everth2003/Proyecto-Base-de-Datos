@@ -1,0 +1,37 @@
+main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr  1fr;
+    grid-template-areas:
+    "header header  header  header  header"
+    "aside section section section section"
+    "footer footer  footer  footer  footer";
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-rows: 20% 70% 10%;
+    height: 98vh;
+    
+}
+
+header {
+    background-color: rgb(8, 90, 68);
+    grid-area: header;
+    display: grid;
+ 
+}
+
+section {
+    grid-area: section;
+    
+}
+
+aside {
+    grid-area: aside;
+   
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(8, 90, 68);
+align-items: center;
+}
