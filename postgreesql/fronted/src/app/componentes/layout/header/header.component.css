@@ -1,0 +1,26 @@
+.main {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Primera columna para el logo, segunda para el título */
+    align-items: center; /* Centra verticalmente */
+    height: 120px; 
+}
+
+.logo {
+    flex-grow: 2;
+  
+}
+
+#logo-header {
+    width: 170px;
+    height: 90px;
+}
+
+.titulo {
+    flex-grow: 1;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

@@ -1,0 +1,61 @@
+<div class="flex align-items-center justify-content-end bg-green-200">
+    <a 
+    pButton 
+    pRipple
+    label="Crear viajero" 
+    icon="pi pi-user-plus"
+    class="p-button-success mr-2"
+    [routerLink]="['/crear-viajeros']"></a>
+
+</div>
+<div>
+    <p-toast></p-toast>
+</div>
+<p-table [value]="viajero">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-clientes>
+        <tr>
+            <td>{{clientes.id}}</td>
+            <td>{{clientes.nombre}}</td>
+            <td>{{clientes.direccion}}</td>
+            <td>{{clientes.telefono}}</td>
+            <td>
+                <button 
+                    pButton 
+                    pRipple
+                    icon="pi pi-print"
+                    class="p-button-success mr-2"
+                    (click)="imprimir(clientes.id)">
+                </button>
+
+                <a 
+                pButton 
+                pRipple
+                icon="pi pi-sync"
+                class="p-button-success mr-2"
+                [routerLink]="['/clientes/edit', clientes.id]">
+                </a>
+
+                <button 
+                type="button"
+                 pButton 
+                 pRipple
+                 icon="pi pi pi-times-circle"
+                 class="p-button-success mr-2"
+                 (click)="eliminar(clientes.id)">
+                </button>
+
+
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
